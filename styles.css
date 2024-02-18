@@ -6,6 +6,7 @@
   --text-dark: #0f172a;
   --text-light: #64748b;
   --extra-light: #f8fafc;
+  --black: #000000;
   --white: #ffffff;
   --max-width: 1200px;
   --header-font: "Playfair Display", serif;
@@ -166,7 +167,7 @@ nav {
       rgba(15, 26, 44, 0.5),
       rgba(15, 26, 44, 0.5)
     ),
-    url("/bg.jpg");
+    url("./bg.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -206,7 +207,8 @@ nav {
   color: var(--white);
 }
 
-.input__group input {
+.input__group input,
+.input__group select {
   width: 100%;
   font-size: 1rem;
   padding: 0.5rem;
@@ -216,6 +218,10 @@ nav {
   border: none;
   border-bottom: 1px solid var(--text-light);
   border-radius: 5px;
+}
+
+.input__group select option {
+  color: var(--black);
 }
 
 .input__group input::placeholder {
@@ -299,6 +305,7 @@ nav {
 
 .room__container {
   padding-block: 5rem;
+  background-color: #eaeef3;
 }
 
 .room__container :is(.section__subheader, .section__header) {
@@ -830,4 +837,12 @@ nav {
 
 .trending__card:hover {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  color: var(--text-light);
+}
+
+img {
+  object-fit: cover;
 }
